@@ -2,7 +2,7 @@ import React from 'react';
 import quotes from '../quotes.json'
 import { useState } from 'react';
 
-const colors =["red", "lightblue", "lightcoral", "lightgreen", "yellow", "coral", "lime", "blueviolet", "orangered"]
+const colors =["red", "lightblue", "lightcoral", "lightgreen", "coral", "lime", "blueviolet", "orangered"]
 
 const QuoteBox = () => {
     
@@ -20,6 +20,7 @@ const QuoteBox = () => {
   return (
     <div className='card'style= {{color : colors[randomColor]}}>
       <h1><i className="fa-solid fa-quote-left"></i> {quotes[index].quote}</h1>
+      <h2>{quotes[index].author}</h2>
       <button onClick={changeQuotes} style= {{background : colors[randomColor]}}>
         <i className="fa-solid fa-greater-than"></i>
       </button>
